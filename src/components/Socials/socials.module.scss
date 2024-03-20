@@ -1,0 +1,21 @@
+.socials {
+  position: relative;
+  z-index: 9999;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: $dark-bg;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

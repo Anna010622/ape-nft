@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "scrollTo": "about",
+    "title": "About"
+  },
+  {
+    "id": "2",
+    "scrollTo": "m-map",
+    "title": "M-map"
+  },
+  {
+    "id": "3",
+    "scrollTo": "faq",
+    "title": "FAQ"
+  },
+  {
+    "id": "4",
+    "scrollTo": "arts",
+    "title": "Arts"
+  },
+  {
+    "id": "5",
+    "scrollTo": "mint",
+    "title": "Mint"
+  }
+]

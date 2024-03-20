@@ -1,0 +1,14 @@
+.btn {
+  width: 100%;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+
+  font-family: $title-family;
+  font-weight: 900;
+  line-height: calc(19 / 16);
+  text-transform: uppercase;
+
+  background-color: $dark-bg;
+  cursor: pointer;
+}

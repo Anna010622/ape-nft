@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Right Grotesk';
+  src: local('Right Grotesk'), local('Right-Grotesk'),
+    url(../fonts/right-grotesk/RightGrotesk-CompactBlack.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+// ----------------------------------------------------------------------//
+
+@font-face {
+  font-family: 'Messina Sans Mono';
+  src: url('../fonts/messina-sans/MessinaSansMono-SemiBold.eot');
+  src:
+    local('Messina Sans Mono SemiBold'),
+    local('MessinaSansMono-SemiBold'),
+    url('../fonts/messina-sans/MessinaSansMono-SemiBold.woff2') format('woff2'),
+    url('../fonts/messina-sans/MessinaSansMono-SemiBold.woff') format('woff'),
+    url('../fonts/messina-sans/MessinaSansMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Messina Sans Mono';
+  src: url('../fonts/messina-sans/MessinaSansMono-Regular.eot');
+  src:
+    local('Messina Sans Mono Regular'),
+    local('MessinaSansMono-Regular'),
+    url('../fonts/messina-sans/MessinaSansMono-Regular.woff2') format('woff2'),
+    url('../fonts/messina-sans/MessinaSansMono-Regular.woff') format('woff'),
+    url('../fonts/messina-sans/MessinaSansMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ----------------------------------------------------------------------//
+
+@font-face {
+  font-family: 'Biro Script Plus';
+  src: url('../fonts/biro-script/BiroScriptPlus-Bold.eot');
+  src:
+    local('Biro Script Plus Bold'),
+    local('BiroScriptPlus-Bold'),
+    url('../fonts/biro-script/BiroScriptPlus-Bold.woff2') format('woff2'),
+    url('../fonts/biro-script/BiroScriptPlus-Bold.woff') format('woff'),
+    url('../fonts/biro-script/BiroScriptPlus-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

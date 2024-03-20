@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $secondary-dark-cl;
+  color: $main-light-cl;
+  font-family: $main-family, sans-serif;
+  font-size: 16px;
+
+  &.noScroll {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,25 @@
+.copyright {
+  margin: 0 auto 24px;
+  width: 216px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  text-align: center;
+
+  :global(.mobileMenuOpened) & {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  :global(.mobileMenuHidden) & {
+    display: none;
+  }
+  @include tablet {
+    :global(.mobileMenuOpened) & {
+      display: none;
+    }
+  }
+}

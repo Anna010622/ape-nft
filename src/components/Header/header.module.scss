@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 70px;
+  left: 8px;
+  right: 8px;
+}
+
+.container {
+  position: relative;
+
+  margin: 0 auto;
+  max-width: calc($mobile - 8px);
+  padding: 0 8px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  z-index: 9999;
+
+  width: 48px;
+  height: 32px;
+}
