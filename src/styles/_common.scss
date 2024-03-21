@@ -12,3 +12,31 @@ body {
     overflow: hidden;
   }
 }
+.section {
+  margin-bottom: 60px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    margin-bottom: 120px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $padding-mob;
+  max-width: $mobile-max;
+
+  @include tablet {
+    max-width: $tablet;
+    padding: 0 $padding-tab;
+  }
+
+  @include desktop {
+    min-width: $desktop-min;
+    max-width: $desktop-max;
+    padding: 0 $padding-desk;
+  }
+}

@@ -3,12 +3,18 @@ import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 
 import './styles/styles.scss';
+import About from './components/About/About';
 
 const App = () => {
   return (
     <>
       <Header />
-      <Hero />
+
+      <main>
+        <Hero />
+        <About />
+      </main>
+
       <Footer />
     </>
   );
