@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 
 import './styles/styles.scss';
 import About from './components/About/About';
+import MindMap from './components/MindMap/MindMap';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <main>
         <Hero />
         <About />
+        <MindMap />
       </main>
 
       <Footer />

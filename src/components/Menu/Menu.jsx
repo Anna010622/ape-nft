@@ -15,7 +15,7 @@ const Menu = ({ isMenuOpened, toggleModal }) => {
   const items = navItems.map((item) => {
     return (
       <li key={item.id} onClick={toggleModal}>
-        <a className={styles.item} href="#section5">
+        <a className={styles.item} href={`#${item.scrollTo}`}>
           {item.title}
         </a>
       </li>

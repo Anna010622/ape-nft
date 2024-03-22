@@ -1,0 +1,21 @@
+.title {
+  margin-bottom: 24px;
+  font-family: $title-family;
+  font-size: 44px;
+  font-weight: 900;
+  text-align: center;
+
+  @include mobile-max {
+    line-height: calc(40 / 44);
+  }
+
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 80px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+    font-size: 160px;
+  }
+}
