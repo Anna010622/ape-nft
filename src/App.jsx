@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import './styles/styles.scss';
 import About from './components/About/About';
 import MindMap from './components/MindMap/MindMap';
+import Arts from './components/Arts/Arts';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Hero />
         <About />
         <MindMap />
+        <Arts />
       </main>
 
       <Footer />
