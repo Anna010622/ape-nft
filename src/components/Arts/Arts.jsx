@@ -27,7 +27,7 @@ const Arts = () => {
   };
 
   return (
-    <section className="section">
+    <section className="section" id="arts">
       <div className="container">
         <Title>COLLECTION</Title>
 

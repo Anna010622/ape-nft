@@ -6,6 +6,7 @@ import './styles/styles.scss';
 import About from './components/About/About';
 import MindMap from './components/MindMap/MindMap';
 import Arts from './components/Arts/Arts';
+import FAQ from './components/FAQ/FAQ';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Hero />
         <About />
         <MindMap />
+        <FAQ />
         <Arts />
       </main>
 

@@ -1,0 +1,31 @@
+.item {
+  transition: margin $transition;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &.itemActive {
+    margin-bottom: 8px;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+
+    &.itemActive {
+      margin-bottom: 18px;
+    }
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    &.itemActive {
+      margin-bottom: 24px;
+    }
+  }
+}
