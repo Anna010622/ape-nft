@@ -1,14 +1,41 @@
 .btn {
   width: 100%;
-  padding: 11px 16px;
+  padding: 10px 12px 12px;
   border: none;
   border-radius: 8px;
 
   font-family: $title-family;
+  font-size: 16px;
   font-weight: 900;
   line-height: calc(19 / 16);
   text-transform: uppercase;
 
   background-color: $dark-bg;
   cursor: pointer;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $main-light-cl;
+  }
+
+  @include tablet {
+    border-radius: 12px;
+  }
+
+  @include desktop {
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    padding: 16px 20px 20px;
+  }
+}
+
+.btn.dark {
+  background-color: $accent-cl;
+  color: $main-light-cl;
+
+  &:hover,
+  &:focus {
+    color: $main-dark-cl;
+  }
 }

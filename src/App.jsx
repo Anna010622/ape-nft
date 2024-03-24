@@ -7,6 +7,7 @@ import About from './components/About/About';
 import MindMap from './components/MindMap/MindMap';
 import Arts from './components/Arts/Arts';
 import FAQ from './components/FAQ/FAQ';
+import ContactUs from './components/ContactUs/ContactUs';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <MindMap />
         <FAQ />
         <Arts />
+        <ContactUs />
       </main>
 
       <Footer />

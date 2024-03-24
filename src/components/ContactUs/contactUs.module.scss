@@ -1,0 +1,135 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+
+  @include tablet {
+    max-width: 397px;
+  }
+
+  @include desktop {
+    max-width: 581px;
+  }
+}
+
+.text {
+  margin-bottom: 16px;
+
+  line-height: calc(19 / 16);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+
+    font-size: 24px;
+    line-height: calc(29 / 24);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 auto 16px;
+    height: 36px;
+    width: 36px;
+    background-image: url(../../assets/icons/cross.svg);
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 248px;
+  }
+
+  @include desktop {
+    gap: 24px;
+    max-width: 397px;
+  }
+}
+
+.field {
+  display: flex;
+  position: relative;
+}
+
+.iconContainer {
+  border-radius: 8px 0 0 8px;
+  padding: 12px;
+  background-color: $main-dark-cl;
+
+  @include desktop {
+    border-radius: 12px 0 0 12px;
+    padding: 20px;
+  }
+}
+.icon {
+  display: block;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  padding: 17px 24px;
+
+  border-radius: 0 8px 8px 0;
+  border: 1px solid $main-dark-cl;
+  color: $main-light-cl;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  @include desktop {
+    border-radius: 0 12px 12px 0;
+    padding: 22.5px 24px;
+    height: 64px;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
+
+  &::placeholder {
+    color: $main-light-cl;
+    opacity: 24%;
+    text-transform: uppercase;
+    line-height: calc(19 / 16);
+  }
+  &:focus-visible {
+    outline: none;
+    border-color: $main-light-cl;
+  }
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+
+  font-size: 10px;
+  line-height: calc(12 / 10);
+  color: $accent-cl;
+
+  @include desktop {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    bottom: -16px;
+  }
+}
