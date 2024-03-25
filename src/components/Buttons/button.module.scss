@@ -13,6 +13,7 @@
   background-color: $dark-bg;
   cursor: pointer;
   transition: color $transition;
+  backdrop-filter: blur(12px);
 
   &:hover,
   &:focus {

@@ -1,23 +1,74 @@
 .hero {
+  position: relative;
   margin: 54px auto 60px;
   padding: 0 8px;
   max-width: $mobile-max;
+
+  @include tablet {
+    margin-bottom: 80px;
+    padding: 0 16px;
+    max-width: $tablet;
+  }
+
+  @include desktop {
+    margin: 16px auto 120px;
+    max-width: $desktop-max;
+  }
 }
 
 .container {
+  margin: 0 auto;
+  @include mobile-max {
+    padding-left: calc($padding-mob - 8px);
+    padding-right: calc($padding-mob - 8px);
+  }
+
+  @include tablet {
+    max-width: 591px;
+  }
+
+  @include desktop {
+    max-width: 1019px;
+  }
+}
+.heroContent {
+  padding-top: 36px;
+  padding-bottom: 15px;
   border-radius: 12px;
   background-color: $accent-cl;
-  padding: 36px 64px 19px;
-  color: $main-dark-cl;
   text-align: center;
+  color: $main-dark-cl;
+
+  @include tablet {
+    padding-top: 124px;
+    padding-bottom: 10px;
+  }
+
+  @include desktop {
+    padding-top: 197px;
+    padding-bottom: 51px;
+  }
 }
 .title {
   margin-bottom: 8px;
+
   font-family: $title-family;
   font-size: 44px;
-  line-height: calc(44 / 44);
   font-weight: 900;
   letter-spacing: calc(44px * 0.01);
+
+  @include tablet {
+    margin-bottom: 16px;
+    font-size: 92px;
+    word-spacing: 158px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+    font-size: 164px;
+    white-space: nowrap;
+    word-spacing: 260px;
+  }
 }
 
 .accentText {
@@ -28,6 +79,21 @@
   &:not(:first-child) {
     margin-bottom: 6px;
   }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: calc(33 / 20);
+    text-align: left;
+
+    &:not(:first-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    font-size: 24px;
+    line-height: calc(40 / 24);
+  }
 }
 
 .img {
@@ -35,10 +101,63 @@
   margin: 0 auto;
   width: 100%;
   object-fit: cover;
+
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+    transform: translateX(-50%);
+    width: 283px;
+    height: 386px;
+  }
+
+  @include desktop {
+    width: 463px;
+    height: 612px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  top: -4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include tablet {
+    top: -25px;
+    flex-direction: column-reverse;
+    gap: 16px;
+    max-width: 190px;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    top: -30px;
+    gap: 28px;
+    max-width: 337px;
+  }
 }
 
 .text {
-  margin: 0 auto;
   font-size: 12px;
   line-height: calc(14 / 12);
+  text-transform: uppercase;
+  font-weight: 00;
+
+  @include tablet {
+    text-align: justify;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 80px;
+    }
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
 }

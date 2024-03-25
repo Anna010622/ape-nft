@@ -17,8 +17,6 @@ const Accordion = ({ question, answer, id, active, setActive, url }) => {
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
-  console.log(height);
-
   return (
     <div
       className={

@@ -1,11 +1,11 @@
-import navItems from './navItems.json';
-import styles from './menu.module.scss';
 import { useEffect } from 'react';
 import Copyright from '../Copyright/Copyright';
+import navItems from './navItems.json';
+import styles from './menu.module.scss';
 
 const Menu = ({ isMenuOpened, toggleModal }) => {
   useEffect(() => {
-    if (isMenuOpened) {
+    if (isMenuOpened && window.matchMedia('(max-width: 767.98px)').matches) {
       document.body.classList.add('noScroll');
     } else {
       document.body.classList.remove('noScroll');
@@ -14,9 +14,9 @@ const Menu = ({ isMenuOpened, toggleModal }) => {
 
   const items = navItems.map((item) => {
     return (
-      <li key={item.id} onClick={toggleModal}>
-        <a className={styles.item} href={`#${item.scrollTo}`}>
-          {item.title}
+      <li className={styles.item} key={item.id} onClick={toggleModal}>
+        <a className={styles.link} href={`#${item.scrollTo}`}>
+          <span className={styles.text}>{item.title}</span>
         </a>
       </li>
     );
@@ -38,7 +38,7 @@ const Menu = ({ isMenuOpened, toggleModal }) => {
       </div>
 
       <button className={styles.btn} onClick={toggleModal}>
-        {isMenuOpened ? 'Close' : 'Menu'}
+        <span className={styles.text}> {isMenuOpened ? 'Close' : 'Menu'}</span>
       </button>
     </>
   );

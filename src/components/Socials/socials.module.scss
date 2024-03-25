@@ -13,9 +13,45 @@
   border-radius: 8px;
 
   background-color: $dark-bg;
+  backdrop-filter: blur(12px);
+
   cursor: pointer;
+  transition:
+    filter $transition,
+    background-color $transition;
 
   &:not(:last-child) {
     margin-bottom: 8px;
+  }
+
+  @include mobile-max {
+    .socialsInMobMenu & {
+      background-color: $dark-bg;
+      filter: invert(100%);
+    }
+  }
+
+  @include desktop {
+    width: 80px;
+    height: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.icon {
+  width: 16px;
+  aspect-ratio: 1;
+  transition: filter $transition;
+
+  @include tablet {
+    width: 24px;
+  }
+
+  .item:hover &,
+  .item:focus & {
+    filter: invert(100%);
   }
 }

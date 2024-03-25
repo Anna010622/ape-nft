@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../../assets/images/logo/logo.svg';
+import logo from '../../assets/icons/logo.svg';
 import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
 
@@ -18,12 +18,25 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/">
-          <img className={styles.logo} src={logo} alt="Logo" />
-        </a>
-        <div>
-          <Menu isMenuOpened={isMenuOpened} toggleModal={toggleModal} />
-          <Socials closeMobileMenu={closeMobileMenu} />
+        <div className={styles.content}>
+          <a href="/">
+            <img
+              className={
+                isMenuOpened
+                  ? `${styles.logo} ${styles.logoInMenu}`
+                  : `${styles.logo}`
+              }
+              src={logo}
+              alt="Logo"
+            />
+          </a>
+          <div>
+            <Menu isMenuOpened={isMenuOpened} toggleModal={toggleModal} />
+            <Socials
+              isMenuOpened={isMenuOpened}
+              closeMobileMenu={closeMobileMenu}
+            />
+          </div>
         </div>
       </div>
     </header>

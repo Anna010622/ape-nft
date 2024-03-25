@@ -1,5 +1,5 @@
 import Title from '../Title/Title';
-import Button from '../Button/Button';
+import Button from '../Buttons/Button';
 import iconMetamask from '../../assets/icons/metamask.svg';
 import iconDiscord from '../../assets/icons/discord.svg';
 import styles from './contactUs.module.scss';

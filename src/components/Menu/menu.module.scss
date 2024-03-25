@@ -1,13 +1,38 @@
 .menu {
-  position: fixed;
   z-index: 1000;
-  inset: 0;
-  background-color: $secondary-dark-cl;
+  opacity: 1;
+
+  transition:
+    background-color $transition,
+    opacity $transition;
 
   &:global(.mobileMenuHidden) {
     visibility: hidden;
     height: 0;
     width: 0;
+    opacity: 0;
+  }
+  @include mobile-max {
+    position: fixed;
+    inset: 0;
+    background-color: $secondary-dark-cl;
+  }
+
+  @include tablet {
+    position: absolute;
+    right: 0;
+    padding-right: 48px;
+    height: 48px;
+    border-radius: 12px;
+
+    background-color: $dark-bg;
+    backdrop-filter: blur(12px);
+    transform: translateX(0);
+  }
+
+  @include desktop {
+    height: 80px;
+    padding-right: 80px;
   }
 }
 .nav {
@@ -22,12 +47,53 @@
   gap: 16px;
 
   margin: auto;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+  }
 }
 .item {
+  @include tablet {
+    height: 100%;
+    width: 48px;
+  }
+
+  @include desktop {
+    width: 80px;
+  }
+}
+
+.link {
   font-size: 24px;
   font-weight: 600;
   line-height: calc(29 / 24);
   text-transform: uppercase;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    text-align: center;
+    color: $main-dark-cl;
+    transition: color $transition;
+
+    &:hover,
+    &:focus {
+      color: $main-light-cl;
+    }
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
 }
 
 .btn {
@@ -39,6 +105,7 @@
   height: 48px;
   border: none;
   border-radius: 8px;
+  padding: 0;
 
   font-family: $main-family;
   font-size: 12px;
@@ -47,5 +114,67 @@
   text-transform: uppercase;
 
   background-color: $dark-bg;
+  backdrop-filter: blur(12px);
   cursor: pointer;
+
+  transition:
+    color $transition,
+    background-color $transition;
+
+  @include mobile-max {
+    :global(.mobileMenuOpened) + & {
+      color: $main-light-cl;
+      background-color: $light-bg;
+    }
+  }
+
+  @include tablet {
+    transition:
+      color $transition,
+      background-color 300ms ease-in-out;
+    :global(.mobileMenuOpened) + & {
+      background-color: transparent;
+    }
+  }
+
+  @include desktop {
+    width: 80px;
+    height: 80px;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
+
+  &:hover,
+  &:focus {
+    color: $main-light-cl;
+  }
+}
+
+.text {
+  position: relative;
+}
+.text::after {
+  @include tablet {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 10%;
+    height: 1px;
+    background-color: $main-light-cl;
+    opacity: 0;
+    transition:
+      opacity $transition,
+      width $transition;
+
+    .btn:hover &,
+    .btn:focus &,
+    .link:hover &,
+    .link:focus & {
+      opacity: 1;
+      width: 100%;
+    }
+  }
 }
