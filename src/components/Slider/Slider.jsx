@@ -1,11 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from './slider.module.scss';
 
-let totalSlideAmount = 0;
-
 export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
   const [slideWidth, setSlideWidth] = useState();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlideAmount, setTotalSlideAmount] = useState();
   const [x1, setX1] = useState(0);
 
   const slider = useRef(null);
@@ -34,7 +33,7 @@ export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
   };
 
   useEffect(() => {
-    totalSlideAmount = slider.current.children.length;
+    setTotalSlideAmount(slider.current.children.length);
   }, []);
 
   useEffect(() => {

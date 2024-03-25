@@ -1,19 +1,8 @@
-.sliderWrapper {
-  overflow: hidden;
-  user-select: none;
-}
 .list {
-  @include mobile-max {
-    display: flex;
-    margin-bottom: 24px;
-    transition: transform 400ms linear;
-  }
-
   @include tablet {
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
-    transform: translateX(0) !important;
   }
 }
 
@@ -76,33 +65,5 @@
   @include desktop {
     height: 64px;
     width: 64px;
-  }
-}
-
-.btnWrapper {
-  display: flex;
-  gap: 48px;
-  justify-content: center;
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.btn {
-  width: max-content;
-  padding: 0;
-  border: none;
-
-  font-family: $accent-family;
-  font-size: 24px;
-  line-height: 1;
-  color: $main-light-cl;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
   }
 }
