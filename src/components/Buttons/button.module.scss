@@ -1,5 +1,6 @@
 .btn {
   width: 100%;
+  min-height: 41px;
   padding: 10px 12px 12px;
   border: none;
   border-radius: 8px;
@@ -25,6 +26,7 @@
   }
 
   @include desktop {
+    min-height: 70px;
     font-size: 28px;
     line-height: calc(34 / 28);
     padding: 16px 20px 20px;
