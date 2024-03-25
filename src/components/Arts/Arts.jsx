@@ -34,7 +34,7 @@ const Arts = () => {
         {isMobile && (
           <Slider gap={24} visibleAmountSlide={1}>
             {arts.map((art, id) => (
-              <Slide key={art}>
+              <Slide key={art} slideWidth="100%">
                 <ArtCard art={art} id={id} />
               </Slide>
             ))}
@@ -43,7 +43,7 @@ const Arts = () => {
         {isTablet && (
           <Slider gap={24} visibleAmountSlide={2}>
             {arts.map((art, id) => (
-              <Slide key={art}>
+              <Slide key={art} slideWidth="284px">
                 <ArtCard art={art} id={id} />
               </Slide>
             ))}
@@ -52,7 +52,7 @@ const Arts = () => {
         {isDesktop && (
           <Slider gap={24} visibleAmountSlide={4}>
             {arts.map((art, id) => (
-              <Slide key={art}>
+              <Slide key={art} slideWidth="240px">
                 <ArtCard art={art} id={id} />
               </Slide>
             ))}

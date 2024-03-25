@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import styles from './slider.module.scss';
 
 let totalSlideAmount = 0;
-let itemWidth = 300;
 
 export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
   const [slideWidth, setSlideWidth] = useState();
@@ -43,10 +42,6 @@ export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
       (slider.current?.clientWidth - gap * (visibleAmountSlide - 1)) /
         visibleAmountSlide,
     );
-
-    itemWidth =
-      (slider.current?.clientWidth - gap * (visibleAmountSlide - 1)) /
-      visibleAmountSlide;
   }, [gap, visibleAmountSlide]);
 
   useEffect(() => {
@@ -55,9 +50,6 @@ export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
         (slider.current?.clientWidth - gap * (visibleAmountSlide - 1)) /
           visibleAmountSlide,
       );
-      itemWidth =
-        (slider.current?.clientWidth - gap * (visibleAmountSlide - 1)) /
-        visibleAmountSlide;
     };
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
@@ -98,23 +90,9 @@ export const Slider = ({ children, gap = 24, visibleAmountSlide = 1 }) => {
   );
 };
 
-export const Slide = ({ children }) => {
-  const [width, setWidth] = useState();
-
-  useEffect(() => {
-    setWidth(itemWidth);
-  }, []);
-
-  useEffect(() => {
-    const updateSize = () => {
-      setWidth(itemWidth);
-    };
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-
+export const Slide = ({ children, slideWidth }) => {
   return (
-    <li className={styles.item} style={{ minWidth: `${width}px` }}>
+    <li className={styles.item} style={{ minWidth: `${slideWidth}` }}>
       {children}
     </li>
   );
