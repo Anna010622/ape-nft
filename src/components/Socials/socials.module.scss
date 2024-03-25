@@ -26,8 +26,7 @@
 
   @include mobile-max {
     .socialsInMobMenu & {
-      background-color: $dark-bg;
-      filter: invert(100%);
+      background-color: $light-bg;
     }
   }
 
@@ -45,6 +44,12 @@
   width: 16px;
   aspect-ratio: 1;
   transition: filter $transition;
+
+  @include mobile-max {
+    .socialsInMobMenu & {
+      filter: invert(100%);
+    }
+  }
 
   @include tablet {
     width: 24px;

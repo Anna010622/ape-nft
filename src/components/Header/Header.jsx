@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
 import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
@@ -19,7 +20,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <a href="/">
+          <Link to={'/'} onClick={closeMobileMenu}>
             <img
               className={
                 isMenuOpened
@@ -29,7 +30,7 @@ const Header = () => {
               src={logo}
               alt="Logo"
             />
-          </a>
+          </Link>
           <div>
             <Menu isMenuOpened={isMenuOpened} toggleModal={toggleModal} />
             <Socials
